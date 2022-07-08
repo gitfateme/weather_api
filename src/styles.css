@@ -1,0 +1,123 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(211, 204, 228, 1) 0%,
+    rgba(230, 226, 205, 1) 63%,
+    rgba(182, 231, 241, 1) 100%
+  );
+  box-sizing: border-box;
+}
+
+.weather-card {
+  background-color: #fff;
+  margin: 10vh auto;
+  border-radius: 3rem;
+  min-height: 45rem;
+  padding: 0;
+  overflow: hidden;
+  background-image: url(sky_1.jpg);
+  background-size: cover;
+}
+
+.top {
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.icon-location {
+  font-size: 1.1rem;
+  position: relative;
+  top: -6px;
+}
+
+#time-span {
+  position: relative;
+  top: -0.5rem;
+  left: 1rem;
+}
+
+h2 {
+  position: relative;
+  top: 1rem;
+  font-size: 7rem;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 1) 70%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 3rem;
+}
+
+.current-cf {
+  font-size: 3rem;
+  position: relative;
+  top: -2rem;
+  right: 0.5rem;
+  -webkit-text-fill-color: rgb(233, 233, 233);
+}
+
+.cf-span {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.cf-span a {
+  text-decoration: none;
+  color: aqua;
+}
+
+.top-info {
+  height: 85%;
+}
+
+form {
+  text-align: center;
+}
+.button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.search-input {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.searach-submit {
+  display: inline-block;
+}
+
+.btn-current {
+  display: inline-block;
+}
+
+.bottom {
+  background-color: rgba(255, 255, 255, 0.65);
+  padding-bottom: 1.5rem;
+}
+
+.description-row {
+  text-align: center;
+  min-height: 6rem;
+}
+
+.forecast-row i {
+  font-size: 2.5rem;
+  color: rgb(73, 77, 87);
+}
+
+.time-span {
+  font-size: 0.9rem;
+  color: rgb(73, 77, 87);
+}
+
+.degree-span {
+  font-size: 1.5rem;
+}
