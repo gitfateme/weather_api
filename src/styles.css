@@ -10,7 +10,7 @@ body {
 
 .weather-card {
   background-color: #fff;
-  margin: 10vh auto;
+  margin: 10vh auto 0 auto;
   border-radius: 3rem;
   min-height: 45rem;
   padding: 0;
@@ -120,4 +120,7 @@ form {
 
 .degree-span {
   font-size: 1.5rem;
+}
+
+.github {
 }
