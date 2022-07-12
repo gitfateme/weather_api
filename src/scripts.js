@@ -58,6 +58,7 @@ function getMinute() {
   }
   return newMin;
 }
+
 timeSpan.textContent = `${day} ${hour}:${getMinute()}`;
 
 //city

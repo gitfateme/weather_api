@@ -1,8 +1,14 @@
 body {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(211, 204, 228, 1) 0%,
     rgba(230, 226, 205, 1) 63%,
+    rgba(182, 231, 241, 1) 100%
+  ); */
+  background: linear-gradient(
+    90deg,
+    rgba(217, 205, 247, 0.377) 0%,
+    rgba(175, 204, 224, 0.342) 63%,
     rgba(182, 231, 241, 1) 100%
   );
   box-sizing: border-box;
@@ -90,12 +96,13 @@ form {
   display: inline-block;
 }
 
-.searach-submit {
-  display: inline-block;
+.btn-current {
+  width: 100%;
 }
 
-.btn-current {
-  display: inline-block;
+.search-submit {
+  display: block;
+  width: 100%;
 }
 
 .bottom {
@@ -122,5 +129,9 @@ form {
   font-size: 1.5rem;
 }
 
-.github {
+@media screen and (max-width: 575px) {
+  .weather-card {
+    margin: 0;
+    border-radius: 0;
+  }
 }
