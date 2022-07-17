@@ -89,10 +89,13 @@ function showCityTemperature(res) {
         changeIcon(r);
         cityName.textContent = searchInput.value;
         currentDegree.textContent = Math.round(r.data.main.temp);
+        searchInput.value = "";
+        console.log(r.data);
       })
       .catch((error) => {
         if (error.response) {
           alert(error.response.data.message);
+          searchInput.value = "";
         }
       });
   } else {
@@ -132,6 +135,8 @@ function defaultTemp() {
 //icon and description
 let iconImage = document.getElementById("weather-icon");
 let weatherDescription = document.getElementById("weather-description");
+let humidity = document.getElementById("humidity");
+let windSpeed = document.getElementById("wind-speed");
 
 function changeIcon(r) {
   let newIcon = r.data.weather[0].icon;
@@ -140,9 +145,14 @@ function changeIcon(r) {
     `https://openweathermap.org/img/wn/${newIcon}@2x.png`
   );
 }
+
 function changeDescription(r) {
-  let description = r.data.weather[0].description;
-  weatherDescription.textContent = description;
+  let newDescription = r.data.weather[0].description;
+  weatherDescription.textContent = newDescription;
+  let newHumidity = r.data.main.humidity;
+  humidity.textContent = newHumidity;
+  let newWindSpeed = Math.round(r.data.wind.speed);
+  windSpeed.textContent = newWindSpeed;
 }
 
 //Event listeners

@@ -24,16 +24,36 @@
         <div class="weather-card col-sm-10 col-md-8 col-lg-6 shadow">
           <div class="top container">
             <div class="row top-info">
-              <h1 class="mt-5 mx-2">
-                <i class="fa-solid fa-location-dot icon-location"></i>
-                <span id="city-name">Tehran</span>
-              </h1>
-              <span id="time-span"></span>
-              <h2 class="mx-2 mb-5">
-                <span class="current-degree">23</span>
-                <span class="current-cf">°C</span>
-              </h2>
-              <span class="cf-span">
+              <div class="col-12 col-md-6">
+                <h1 class="mt-5 mx-2">
+                  <i class="fa-solid fa-location-dot icon-location"></i>
+                  <span id="city-name">Tehran</span>
+                </h1>
+                <span id="time-span"></span>
+                <h2 class="mx-2">
+                  <div class="text-center degree-cf">
+                    <span class="current-degree">23</span>
+                    <span class="current-cf">°C</span>
+                  </div>
+                </h2>
+              </div>
+              <div class="col-12 col-md-6 description mt-md-5">
+                <img
+                  src="https://openweathermap.org/img/wn/03n@2x.png"
+                  alt=""
+                  id="weather-icon"
+                  class="mt-md-5"
+                />
+                <ul class="description-ul my-3 text-capitalize">
+                  <li id="weather-description"></li>
+                  <li>Humidity: <span id="humidity">10</span>%</li>
+                  <li>
+                    Wind: <span id="wind-speed">102</span>
+                    <span class="text-lowercase">km/h</span>
+                  </li>
+                </ul>
+              </div>
+              <span class="cf-span pt-3">
                 <a href="#" id="c-link">°C</a> | <a href="#" id="f-link">°F</a>
               </span>
             </div>
@@ -67,20 +87,17 @@
               </form>
             </div>
           </div>
-          <div class="bottom container">
+          <div class="bottom container pb-5">
             <div class="row mb-1 pt-2 text-center">
-              <p>Weather Today</p>
+              <p>Weather Forecast</p>
             </div>
-            <div class="row description-row">
-              <div class="col-12">
-                <img
-                  src="https://openweathermap.org/img/wn/03n@2x.png"
-                  alt=""
-                  id="weather-icon"
-                />
-                <p id="weather-description" class="text-capitalize">Cloudy</p>
-              </div>
+            <div class="row text-center">
+              <div class="col-12 col-md-3"></div>
+              <div class="col-12 col-md-3"></div>
+              <div class="col-12 col-md-3"></div>
+              <div class="col-12 col-md-3"></div>
             </div>
+            <div class="row forecast"></div>
           </div>
         </div>
       </div>

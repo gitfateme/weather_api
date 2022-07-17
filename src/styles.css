@@ -1,16 +1,6 @@
 body {
-  /* background: linear-gradient(
-    90deg,
-    rgba(211, 204, 228, 1) 0%,
-    rgba(230, 226, 205, 1) 63%,
-    rgba(182, 231, 241, 1) 100%
-  ); */
-  background: linear-gradient(
-    90deg,
-    rgba(217, 205, 247, 0.377) 0%,
-    rgba(175, 204, 224, 0.342) 63%,
-    rgba(182, 231, 241, 1) 100%
-  );
+  /* background-color: rgba(68, 66, 66, 0.1); */
+  background-color: #f1faee;
   box-sizing: border-box;
 }
 
@@ -21,13 +11,19 @@ body {
   min-height: 45rem;
   padding: 0;
   overflow: hidden;
-  background-image: url(sky_1.jpg);
-  background-size: cover;
+  background-color: #35617c;
+  /* background-image: url(sky_1.jpg);
+  background-size: cover; */
+}
+.button {
+  background-color: #2b4e80;
+  border: 1px solid #2b4e80;
 }
 
 .top {
   color: #fff;
   padding-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.19);
 }
 
 h1 {
@@ -58,7 +54,10 @@ h2 {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-bottom: 3rem;
+}
+
+.degree-cf {
+  min-width: 16rem;
 }
 
 .current-cf {
@@ -69,6 +68,15 @@ h2 {
   -webkit-text-fill-color: rgb(233, 233, 233);
 }
 
+/* #weather-icon {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3rem;
+} */
+
+.description-ul {
+  list-style: none;
+  padding: 0;
+}
 .cf-span {
   font-size: 2rem;
   text-align: center;
@@ -106,13 +114,16 @@ form {
 }
 
 .bottom {
-  background-color: rgba(255, 255, 255, 0.65);
+  /* background-color: rgba(255, 255, 255, 0.65); */
+  background-color: #a8dadc;
   padding-bottom: 1.5rem;
+  min-height: 100%;
 }
 
-.description-row {
+.description {
   text-align: center;
-  min-height: 6rem;
+  /* position: relative;
+  top: 1rem; */
 }
 
 .forecast-row i {
