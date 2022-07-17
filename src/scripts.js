@@ -60,7 +60,6 @@ function changeWeather(searchInputValue) {
     .then((r) => {
       changeDescription(r);
       changeIcon(r);
-      getForecast(r);
       cityName.textContent = searchInputValue;
       currentDegree.textContent = Math.round(r.data.main.temp);
       searchInput.value = "";
@@ -72,6 +71,12 @@ function changeWeather(searchInputValue) {
       }
     });
 }
+
+// function displayForecast() {
+//   let forecastElement = document.getElementById("forecast");
+//   forecastElement.textContent = "forecast";
+// }
+// displayForecast();
 
 //Time
 
