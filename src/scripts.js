@@ -36,6 +36,43 @@ function changeToFahrenheit(event) {
   }
 }
 
+// function getForecast(r) {
+//   console.log(r.data);
+//   let lat = r.data.coord.lat;
+//   let lon = r.data.coord.lon;
+//   console.log(lat, lon);
+//   let forecastApiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minuetly&appid=${apiKey}`;
+//   axios
+//     .get(forecastApiUrl)
+//     .then((r) => {
+//       console.log(r);
+//     })
+//     .catch((err) => {
+//       alert(err.message);
+//     });
+// }
+
+function changeWeather(searchInputValue) {
+  let newCity = searchInputValue;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}&units=metric`;
+  axios
+    .get(apiUrl)
+    .then((r) => {
+      changeDescription(r);
+      changeIcon(r);
+      getForecast(r);
+      cityName.textContent = searchInputValue;
+      currentDegree.textContent = Math.round(r.data.main.temp);
+      searchInput.value = "";
+    })
+    .catch((error) => {
+      if (error.response) {
+        alert(error.response.data.message);
+        searchInput.value = "";
+      }
+    });
+}
+
 //Time
 
 let timeSpan = document.querySelector("#time-span");
@@ -79,25 +116,8 @@ let apiKey = "20c9277c0c1a5b967be7ce712a171f19";
 
 function showCityTemperature(res) {
   res.preventDefault();
-  let newCity = searchInput.value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}&units=metric`;
   if (searchInput.value) {
-    axios
-      .get(apiUrl)
-      .then((r) => {
-        changeDescription(r);
-        changeIcon(r);
-        cityName.textContent = searchInput.value;
-        currentDegree.textContent = Math.round(r.data.main.temp);
-        searchInput.value = "";
-        console.log(r.data);
-      })
-      .catch((error) => {
-        if (error.response) {
-          alert(error.response.data.message);
-          searchInput.value = "";
-        }
-      });
+    changeWeather(searchInput.value);
   } else {
     alert("Enter city name!");
   }
@@ -154,6 +174,8 @@ function changeDescription(r) {
   let newWindSpeed = Math.round(r.data.wind.speed);
   windSpeed.textContent = newWindSpeed;
 }
+
+//Forecast
 
 //Event listeners
 window.addEventListener("load", defaultTemp);

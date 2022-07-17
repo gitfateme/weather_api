@@ -1,5 +1,4 @@
 body {
-  /* background-color: rgba(68, 66, 66, 0.1); */
   background-color: #f1faee;
   box-sizing: border-box;
 }
@@ -12,8 +11,6 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #35617c;
-  /* background-image: url(sky_1.jpg);
-  background-size: cover; */
 }
 .button {
   background-color: #2b4e80;
@@ -21,7 +18,7 @@ body {
 }
 
 .top {
-  color: #fff;
+  color: #f1faee;
   padding-bottom: 1rem;
   background-color: rgba(255, 255, 255, 0.19);
 }
@@ -47,13 +44,7 @@ h2 {
   position: relative;
   top: 1rem;
   font-size: 7rem;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 1) 70%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f1faee;
 }
 
 .degree-cf {
@@ -65,13 +56,7 @@ h2 {
   position: relative;
   top: -2rem;
   right: 0.5rem;
-  -webkit-text-fill-color: rgb(233, 233, 233);
 }
-
-/* #weather-icon {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 3rem;
-} */
 
 .description-ul {
   list-style: none;
@@ -84,6 +69,9 @@ h2 {
 
 .cf-span a {
   text-decoration: none;
+  color: #a8dadc;
+}
+.cf-span a:hover {
   color: aqua;
 }
 
