@@ -46,8 +46,10 @@ function changeWeather(searchInputValue) {
       changeIcon(r);
       getForecast(r.data.coord);
       currentCF.textContent = "°C";
+      console.log(r.data);
 
       cityName.textContent = searchInputValue;
+      countryName.textContent = r.data.sys.country;
       currentDegree.textContent = Math.round(r.data.main.temp);
       searchInput.value = "";
     })
@@ -150,6 +152,7 @@ timeSpan.textContent = `${day} ${hour}:${getMinute()}`;
 
 //city
 let cityName = document.querySelector("#city-name");
+let countryName = document.getElementById("country-name");
 let searchForm = document.querySelector("#search-form");
 let searchInput = document.querySelector(".search-input");
 let yourLocationButton = document.getElementById("your-location");
@@ -183,6 +186,7 @@ function showCurrentCityTemp(lat, lon) {
     changeDescription(r);
     getForecast(r.data.coord);
     currentCF.textContent = "°C";
+    countryName.textContent = r.data.sys.country;
   });
 }
 
@@ -203,6 +207,7 @@ function defaultTemp() {
     changeDescription(r);
     getForecast(r.data.coord);
     currentCF.textContent = "°C";
+    countryName.textContent = r.data.sys.country;
   });
 }
 

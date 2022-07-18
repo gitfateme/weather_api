@@ -132,6 +132,10 @@ form {
   color: #2b4e80;
 }
 
+#country-name {
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 575px) {
   .weather-card {
     margin: 0;
