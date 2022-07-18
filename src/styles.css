@@ -128,6 +128,10 @@ form {
   font-size: 1.5rem;
 }
 
+.weather-forecast-temp-min {
+  color: #2b4e80;
+}
+
 @media screen and (max-width: 575px) {
   .weather-card {
     margin: 0;
