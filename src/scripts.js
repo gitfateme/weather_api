@@ -46,7 +46,6 @@ function changeWeather(searchInputValue) {
       changeIcon(r);
       getForecast(r.data.coord);
       currentCF.textContent = "°C";
-      console.log(r.data);
 
       cityName.textContent = searchInputValue;
       countryName.textContent = r.data.sys.country;
@@ -230,7 +229,7 @@ function changeDescription(r) {
   weatherDescription.textContent = newDescription;
   let newHumidity = r.data.main.humidity;
   humidity.textContent = newHumidity;
-  let newWindSpeed = Math.round(r.data.wind.speed);
+  let newWindSpeed = (r.data.wind.speed * 3.6).toFixed(1);
   windSpeed.textContent = newWindSpeed;
 }
 
