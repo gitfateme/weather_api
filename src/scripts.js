@@ -1,13 +1,3 @@
-//functions
-
-// function changeCity(event) {
-//   event.preventDefault();
-
-//   if (searchInput.value) {
-//     cityName.textContent = searchInput.value;
-//   }
-// }
-
 function celciusToFahrenheit(celcius) {
   return Math.floor((celcius * 9) / 5 + 32);
 }

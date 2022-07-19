@@ -10,8 +10,10 @@ body {
   min-height: 45rem;
   padding: 0;
   overflow: hidden;
-  background-color: #35617c;
+  /* background-color: #35617c; */
+  background-color: #456a9e;
 }
+
 .button {
   background-color: #2b4e80;
   border: 1px solid #2b4e80;
@@ -26,6 +28,7 @@ body {
 h1 {
   font-weight: bold;
   text-transform: capitalize;
+  color: #f5f9ff;
 }
 
 .icon-location {
@@ -44,7 +47,8 @@ h2 {
   position: relative;
   top: 1rem;
   font-size: 7rem;
-  color: #f1faee;
+  /* color: #f1faee; */
+  color: #f5f9ff;
 }
 
 .degree-cf {
@@ -102,16 +106,14 @@ form {
 }
 
 .bottom {
-  /* background-color: rgba(255, 255, 255, 0.65); */
-  background-color: #a8dadc;
+  /* background-color: #a8dadc; */
+  background-color: #c4ddff;
   padding-bottom: 1.5rem;
   min-height: 100%;
 }
 
 .description {
   text-align: center;
-  /* position: relative;
-  top: 1rem; */
 }
 
 .forecast-row i {
